@@ -7,7 +7,11 @@ const storeSchema = new Schema({
         required: true,
         unique: true,
     },
+    location: {
+        type: String,
+        required: true,
+    },
 });
-const Cat = mongoose.model('Cat', storeSchema);
+const Park = mongoose.model('Park', storeSchema);
 
-module.exports = {Cat}
+module.exports = {Park}
