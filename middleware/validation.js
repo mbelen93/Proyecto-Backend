@@ -1,4 +1,4 @@
-const {Park} = require('../models/models');
+const {Park} = require('../models/model');
 
 const validarId = async (req, res, next)=>{
     try {
