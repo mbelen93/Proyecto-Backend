@@ -23,15 +23,15 @@ const crearParque = async (req,res) =>{
     try {
         const error = validationResult(req)
         if (error.isEmpty()) {
-            const {name} = req.body
-            const parque = new Park({ name });
+            const {name,location} = req.body
+            const parque = new Park({name, location});
             await parque.save()
             res.status(201).json({parque})            
         } else {
             res.status(501).json(error)
         }
     } catch (error) {
-        res.status(501).json({msj:"Este nombre de parque ya existe en la base de datos"})
+        res.status(501).json({msj:"El nombre de parque ya existe en la base de datos"})
     }
 }
 
