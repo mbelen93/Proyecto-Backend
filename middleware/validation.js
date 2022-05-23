@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 const {Park} = require('../models/model');
-=======
-const {Park} = require('../models/models');
->>>>>>> 35a2790f3fc612ad3c140e7ae4c462eb7d3cc23c
 
 const validarId = async (req, res, next)=>{
     try {
